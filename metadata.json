@@ -1,0 +1,8 @@
+{
+  "name": "DebunkAI - Viral Misinformation Debunker",
+  "description": "Fact-check viral posts, rumors, and claims using Gemma 4 AI with detailed findings and local Ollama support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
