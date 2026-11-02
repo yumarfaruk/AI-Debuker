@@ -1,108 +1,73 @@
-# DebunkAI - Viral Misinformation Debunker
+# DebunkAI - Nigerian 2027 Election & Viral Fact-Checker
 
-DebunkAI helps everyone—students, families, working people, and the general public—fact-check viral social media posts, forwarded WhatsApp messages, and online rumors.
+DebunkAI helps citizens, community leaders, students, and families fact-check viral social media posts, WhatsApp voice notes, and video clips—with special high-depth audit capabilities for the **upcoming Nigerian 2027 General Elections** and **Coordinated Inauthentic Behavior (CIB) campaigns**.
 
-It is powered by **Gemma 4** through Google AI Studio, with a local fallback using **Ollama**.
-
----
-
-## 1. What This App Does
-
-When you paste a viral post, DebunkAI quickly tells you:
-1. **The Verdict**:
-   - **Misinformation**: Untrue information shared by accident or honest mistake.
-   - **Disinformation**: Lies and hoaxes made on purpose to trick, scam, or manipulate people.
-   - **Malinformation**: Real information twisted out of context or leaked maliciously to cause harm.
-   - **Verified True**: Accurate and backed by facts.
-2. **What the post claims** vs **The verified reality**.
-3. **Red flags**: Catches manipulation tricks like fake urgency ("Share before it gets deleted!"), anonymous doctors, or scam links.
-4. **How to reply politely**: A friendly 2-sentence response you can copy and paste into family or group chats without starting an argument.
+It is powered by **Gemma 4** through Google AI Studio with local offline fallback using **Ollama**, and works both as a **Web Fact-Checker** and an interactive **WhatsApp / Facebook Messenger Chatbot**.
 
 ---
 
-## 2. Quick Setup
+## 1. Nigerian 2027 Election Special High-Depth Analysis
 
-Make sure you have Node.js installed (version 18 or newer).
-
-1. Clone or download this project folder.
-2. Open your terminal in the project folder and install dependencies:
-   ```bash
-   npm install
-   ```
-3. Copy the example settings file:
-   ```bash
-   cp .env.example .env
-   ```
+Any post, audio recording, or video touching on the Nigerian 2027 elections automatically activates the **Electoral Integrity Audit**:
+1. **Statutory INEC Protocol Check**: Cross-references claims against the Electoral Act, official Independent National Electoral Commission (INEC) guidelines, BVAS accreditation protocols, and IReV results transmission rules.
+2. **Peace & Security Impact**: Assesses the risk of inciting polling unit unrest, ethnic/religious friction, or voter suppression.
+3. **Source Provenance & Recycled Context**: Checks if the content is recycled archival footage (e.g. from 2015, 2019, or 2023 elections falsely claimed to be 2027).
+4. **Community De-escalation Reply**: Formats a culturally respectful message tailored for Nigerian WhatsApp family, church, and community groups to prevent panic and stop the spread of rumors without confrontation.
 
 ---
 
-## 3. How to Run with Google AI Studio (API)
+## 2. Coordinated Inauthentic Behavior (CIB) & Troll Farm Analysis
 
-This is the default mode. It runs Gemma 4 in the cloud using Google AI Studio.
-
-1. Get a free API key from [Google AI Studio](https://aistudio.google.com/).
-2. Open your `.env` file and set:
-   ```env
-   PROVIDER=api
-   GEMINI_API_KEY=your_actual_api_key_here
-   GEMINI_MODEL=gemma-4-26b-a4b-it
-   ```
-   *(Note: In Google AI Studio Build, `GEMINI_API_KEY` is provided automatically).*
-3. Start the app:
-   ```bash
-   npm run dev
-   ```
-4. Open your browser at `http://localhost:3000`.
+Disinformation in high-stakes election cycles is frequently weaponized through coordinated networks:
+- **Copypasta Networks**: Identical paragraphs copy-pasted across hundreds of WhatsApp broadcast groups and Twitter/X threads to manufacture false consensus.
+- **Cloned Media Handles**: Fake accounts impersonating credible news brands (e.g. cloned Channels TV, BBC Hausa, or INEC handles).
+- **Manufactured Urgency**: Coordinated panic commands ("Forward to 10 chats before this is deleted").
+- **Dispersion Tracing**: Analyzes the propagation mechanics and provides actionable advice on breaking the forwarding chain.
 
 ---
 
-## 4. How to Run with Ollama (Local on Your Computer)
+## 3. Audio Voice Notes & Video Clip Forensics
 
-If you want to run completely offline without an API key, you can use Ollama.
+Misinformation in Nigerian and global elections circulates heavily through forwarded WhatsApp voice notes and short video clips:
 
-1. Install [Ollama](https://ollama.com/).
-2. Download the Gemma 4 local model:
-   ```bash
-   ollama run gemma4:e2b
-   ```
-3. Open your `.env` file and switch the provider:
-   ```env
-   PROVIDER=local
-   OLLAMA_ENDPOINT=http://localhost:11434
-   OLLAMA_MODEL=gemma4:e2b
-   ```
-4. Start the app:
-   ```bash
-   npm run dev
-   ```
-5. Open your browser at `http://localhost:3000`.
+### 🎙️ Audio Voice Note Features:
+- **Direct Recording & Audio Upload**: Record voice notes directly from your microphone or upload audio files.
+- **Interactive Audio Waveform Player**: Play voice notes in the chat or on the web dashboard.
+- **Voice Forensics**: Checks for synthetic voice cloning (AI deepfakes), spliced acoustics, robotic pitch jitter, and room ambiance cuts.
+
+### 🎬 Video Clip Features:
+- **Video Upload & Frame Inspection**: Upload viral clips or paste social media captions.
+- **Visual Deepfake Inspection**: Detects AI lip-syncing drift, mismatched lower-third television graphics (cloned Channels TV, NTA, Arise News banners), and manipulated date metadata.
+- **Archival Verification**: Flags old footage from previous election years passed off as new.
+
+---
+
+## 4. How to Use
+
+### A. WhatsApp & Facebook Chatbot Simulator
+1. Open the app and click the **WhatsApp / FB Chatbot** tab.
+2. Toggle between **WhatsApp** (green interface with checkmarks) and **Messenger** (blue interface).
+3. Switch modality between **📝 Text**, **🎙️ Voice Note**, or **🎬 Video Clip**.
+4. Test with 1-click realistic Nigerian 2027 election scenarios (e.g. *Coordinated Copypasta Server Hoax*, *Cloned News Impersonation*, *Leaked BVAS 2PM Voice Note*, *Recycled Ballot Box Video*, *Candidate Deepfake*, *₦2,000 PVC Renewal Scam*).
+
+### B. Web Fact-Checker
+1. Click the **Web Fact-Checker** tab.
+2. Select **Text Claim**, **Voice Note (Audio)**, or **Video Clip**.
+3. Record a voice note with your mic or select a sample.
+4. Click **Run Gemma 4 High-Depth Audit** to view the full report, credibility gauge, INEC statutory breakdown, CIB network analysis, peace assessment, and copyable WhatsApp message.
+
+### C. Live Meta Webhook Setup
+1. Click **Meta Setup** in the top navigation.
+2. Copy your live Webhook Callback URL (`/api/webhook`) and Verify Token (`debunk_bot_token`).
+3. Follow the 4-step setup guide for WhatsApp Cloud API or Facebook Pages.
+4. Use the **Ping WhatsApp Audio Webhook** button to simulate live incoming election voice notes and inspect the logs!
 
 ---
 
 ## 5. Running the Smoke Test
 
-We included an automated smoke test script that sends a realistic viral health hoax to the active provider and verifies everything works end-to-end.
-
-To run it:
+To run the automated smoke test script:
 ```bash
 npm run test:smoke
 ```
-
-If everything works, you will see the detailed findings and a final:
-```
-RESULT: PASS
-```
-
-You can also run the smoke test directly in the web app by clicking the **"Smoke Test"** button in the top navigation bar!
-
----
-
-## 6. Project Files
-
-- `src/App.tsx`: Clean, single-page web app for the general public.
-- `server/debunkService.ts`: Core verification logic for Gemma 4 and Ollama.
-- `scripts/smoke-test.ts`: Automated test script printing `PASS` or `FAIL`.
-- `server.ts`: Production Express server.
-- `vite.config.ts`: Development server configuration with built-in API proxy.
-- `.env.example`: Template for environment variables.
-- `.gitignore`: Keeps your private keys and `.env` safe.
+Or click the **Smoke Test** button in the top navigation bar of the web app.

@@ -1,7 +1,9 @@
 {
-  "name": "DebunkAI - Viral Misinformation Debunker",
-  "description": "Fact-check viral posts, rumors, and claims using Gemma 4 AI with detailed findings and local Ollama support.",
-  "requestFramePermissions": [],
+  "name": "DebunkAI - Verify before you share",
+  "description": "Verify before you share: High in-depth fact-checking for the Nigerian 2027 elections, viral posts, WhatsApp voice notes, and video deepfakes using Gemma 4.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]
